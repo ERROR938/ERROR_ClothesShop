@@ -76,8 +76,6 @@ function CreateClotheMenu()
 
         onBack = function(data, testt)
 
-            print(validate)
-
             if not validate and data.currentMenu == "interactions" then
 
                 p_skin = GetPlayerSkin()
@@ -211,7 +209,7 @@ function CreateClotheMenu()
 
                 SetPedComponentVariation(ped, 3, btn.num, 0, 1)
 
-                p_skin['arms_1'] = btn.num
+                p_skin['arms'] = btn.num
                 p_skin['arms_2'] = 0
     
             end

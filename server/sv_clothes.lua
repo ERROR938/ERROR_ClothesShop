@@ -3,13 +3,13 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 ESX.RegisterServerCallback("error:payPlayerSkin", function(source, cb)
 
-    local xPLayer = ESX.GetPlayerFromId(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
 
-    if xPLayer.getAccount('money').money >= Config.price then
+    if xPlayer.getAccount('money').money >= Config.price then
 
-        xPLayer.removeAccountMoney('money', Config.price)
+        xPlayer.removeAccountMoney('money', Config.price)
 
-        xPLayer.showNotification("Vous venez de vous changer pour "..Config.price.."$")
+        xPlayer.showNotification("Vous venez de vous changer pour "..Config.price.."$")
 
         cb(true)
 
